@@ -1,0 +1,109 @@
+.lx_navbar {
+    position: fixed;
+    width: 100%;
+}
+
+.top-bar {
+    ul {
+        li {
+            a {
+                color: white;
+            }
+            a:hover {
+                color: #bc0d3b;
+            }
+        }
+    }
+}
+
+.banner {
+    background-image: url(../img/luminox_banner.jpg);
+    background-size: cover;
+    background-position: left bottom;
+    padding-top: 100px;
+    padding-bottom: 2rem;
+}
+
+.btn_enviar {
+    font-size: 1.3rem;
+}
+
+.caracteristicas {
+    background-color: white;
+    color: #5c5c5c;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.coleccion {
+    background-image: url(../img/fondo_coleccion.jpg);
+    background-size: cover;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.regalos {
+    background-color: white;
+    color: #5c5c5c;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contacto {
+    background-image: url(../img/luminox_footer_banner.jpg);
+    background-size: cover;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.byc_modal {
+    h5 {
+        color: black;
+    }
+    p {
+        color: black;
+    }
+}
+
+//PAGINA GRACIAS
+
+.gracias_fondo_horizontal {
+    background-image: url(../img/gracias_fondo.jpg);
+    background-size: cover;
+    background-position: right bottom;
+    width: 100%;
+    height: 100vh;
+    padding-top: 2rem;
+}
+
+.titulo_luminox_movil {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+.titulo_luminox_pc {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 4em;
+}
+
+.gracias_fondo_vertical {
+    background-image: url(../img/gracias_fondo_vertical.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    height: 100vh;
+    padding-top: 2rem;
+}
+
+.logo_moviles {
+    width: 25vw;
+    height: auto;
+}
+
+.text_lumi_movil {
+    margin-top: 2rem; 
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1em;
+}
