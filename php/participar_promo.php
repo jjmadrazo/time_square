@@ -5,11 +5,14 @@ $correo = $_POST['mail'];
 $telefono = $_POST['telefono'];
 $from = $correo;
 // Mail donde se reive el formulario
-$para  = 'diego@codigital.com.ar' . ', '; // atención a la coma
-$para .= 'jmadrazo74@gmail.com';
+$para  = 'rbanfi@grupochronex.com' . ', '; // atención a la coma
+$para .= 'veronicabacci@grupochronex.com' . ', '; // atención a la coma
+$para .= 'snesi@itimegroup.com.ar' . ', '; // atención a la coma
+$para .= 'fdifonti@itimegroup.com.ar' . ', '; // atención a la coma
+$para .= 'diego@codigital.com.ar';
 
 // Asunto
-$subject = "Participar en la promo Luminox";
+$subject = "Participar en la promo Luminox - Time Square";
 // Cuerpo del mensaje
 $emailbody = "";
 $emailbody .= "Nombre: " . $nombre . "\n";
