@@ -1,6 +1,7 @@
 .lx_navbar {
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 
 .top-bar {
@@ -42,6 +43,13 @@
     padding-bottom: 100px;
 }
 
+.coleccion_vert {
+    background-image: url(../img/fondo_coleccion.jpg);
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .regalos {
     background-color: white;
     color: #5c5c5c;
@@ -78,7 +86,7 @@
 
 .titulo_luminox_movil {
     font-family: 'Allerta Stencil', sans-serif;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
 }
 

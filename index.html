@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUMINOX</title>
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/app.css">
 
     <!-- Analytics -->
@@ -21,18 +28,18 @@
     </script>
 
   </head>
-  <body>
+  <body id="inicio">
 		<!--NAVBAR-->
 		<div class="lx_navbar">
 			<div class="title-bar" data-responsive-toggle="luminox_navbar" data-hide-for="medium">
 				<button class="menu-icon" type="button" data-toggle="luminox_navbar"></button>
-				<div class="title-bar-title"></div>
+				<div class="title-bar-title">TIME SQUARE</div>
 			</div>
 
 			<div class="top-bar" id="luminox_navbar">
-				<ul class="vertical medium-horizontal menu expanded">
+				<ul class="vertical medium-horizontal menu expanded" data-magellan>
 					<li><img src="img/luminox_logo.png" width="60px" alt="" class="float-center"></li>
-					<li><a href="#" class="text-center">PROMO LUMINOX</a></li>
+					<li><a href="#inicio" class="text-center">PROMO LUMINOX</a></li>
 					<li><a href="#colecciones" class="text-center">COLECCIONES</a></li>
 					<li><a href="#regalos" class="text-center">REGALOS</a></li>
 					<li><a href="#ancla_contacto" class="text-center">CONTACTO</a></li>
@@ -41,16 +48,26 @@
 			</div>
 		</div>		
 
-		<!--BANNER-->
+		<!--BANNER PROMO-->
 		<div class="expanded row banner">
-			<div class=" row">
-				<div class="small-12 large-6 large-offset-6 columns">
+			<div class="row show-for-landscape">
+				<div class="large-6 large-offset-6 columns">
                     <h1 class="text-right titulo_luminox_pc">PROMO LUMINOX</h1>
 				</div>
 			</div>
-			<div class=" row">
-				<div class="small-12 large-6 large-offset-6 columns">
+            <div class="row show-for-portrait">
+				<div class="small-12 columns">
+                    <h1 class="text-center titulo_luminox_movil">PROMO LUMINOX</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-6 large-offset-6 columns show-for-landscape">
 					<img src="img/linea_promo.png" width="452px" height="9px" alt="" class="float-right">
+				</div>
+			</div>
+            <div class="row">
+				<div class="small-12 show-for-portrait">
+					<img src="img/linea_promo.png" width="452px" height="9px" alt="" class="float-center">
 				</div>
 			</div>
 			<div class=" row" style="margin-top: 30px;">
@@ -60,20 +77,21 @@
 					</h5>
 				</div>
 			</div>
-			<div class=" row" style="margin-top: 30px;">
-				<div class="small-12 large-7 columns">
+			<div class="row" style="margin-top: 30px;">
+				<div class="small-12 large-7 columns show-for-landscape">
 					<img src="img/12_cuotas.png" width="150px" height="auto" alt="" class="float-right">
 				</div>
 				<div class="small-12 large-5 columns">
-					<form action="php/recibir_info.php" method="POST">
-							<input type="text" name="nombre" placeholder="Nombre:">
+					<form action="php/participar_promo.php" method="POST">
+							<input type="text" name="nombre" placeholder="Nombre Completo:">
 							<input type="email" name="mail" placeholder="Mail:">
 							<input type="text" name="telefono" placeholder="Teléfono:">
-							<input type="submit" class="button primary expanded btn_enviar" value="RECIBIR MÁS INFORMACIÓN">
+							<input type="submit" class="button primary expanded btn_enviar" value="PARTICIPAR">
 					</form>
 				</div>
 			</div>	
 		</div>
+        <!--BANNER PROMO VERT-->
 
 		<!-- LUMINOX CARACTERISTICAS -->
 		<div class="expanded row caracteristicas">
@@ -95,18 +113,19 @@
 				<div class="small-12 large-4 columns">
 					<img src="img/swiss_made_ico.png" alt="" class="float-center">
 					<h3 class="text-center" style="color: black"><strong>SWISS MADE</strong></h3>
-					<h4 class="text-center">Cumple con los altos estándares de calidad suiza.</h4>
+					<h4 class="text-center">Cumple con los altos estándares de calidad Suiza.</h4>
 				</div>
 				<div class="small-12 large-4 columns">
 					<img src="img/glow_ico.png" alt="" class="float-center">
 					<h3 class="text-center" style="color: black"><strong>24/7 GLOW</strong></h3>
-					<h4 class="text-center">Sin necesidad de tocar ningún pulsador.</h4>
+					<h4 class="text-center">Siempre visible sin necesidad de tocar ningún pulsador.</h4>
 				</div>
 			</div>
 		</div>
 
-		<!-- COLECCIONES -->
-		<div class="expanded row coleccion" id="colecciones">
+		<!-- COLECCIONES EN HORIZONTAL -->
+        <div id="colecciones"></div>
+		<div class="expanded row coleccion show-for-landscape">
 			<div class="row">
 				<h2 class="text-center"><strong>COLECCIONES</strong></h2>
 			</div>
@@ -118,20 +137,53 @@
 			</div>
 			<div class="row" style="margin-top: 3rem;">
 				<div class="small-12 medium-3 columns">
-					<img src="img/coleccion_air.png" width="200rem" height="auto" alt="" class="float-center">
+					<img src="img/coleccion_air.png" alt="" class="float-center">
 				</div>
 				<div class="small-12 medium-3 columns">
-					<img src="img/coleccion_land.png" width="250rem" height="auto" alt="" class="float-center">
+					<img src="img/coleccion_land.png" alt="" class="float-center">
 				</div>
 				<div class="small-12 medium-3 columns">
-					<img src="img/coleccion_sea.png" width="220rem" height="auto" alt="" class="float-center">
+					<img src="img/coleccion_sea.png" alt="" class="float-center">
 				</div>
 				<div class="small-12 medium-3 columns">
-					<img src="img/coleccion_space.png" width="290rem" height="auto" alt="" class="float-center">
+					<img src="img/coleccion_space.png" alt="" class="float-center">
 				</div>
 			</div>
 		</div>
-
+        <!-- COLECCIONES EN VERTICAL -->
+        <div class="expanded row coleccion_vert show-for-portrait">
+            <div class="row">
+				<h2 class="text-center"><strong>COLECCIONES</strong></h2>
+			</div>
+			<div class="row">
+				<img src="img/linea_secciones.png" width="119px" height="9px" alt="" class="float-center">
+			</div>
+			<div class="row" style="margin-top: 1rem;">
+				<h5 class="text-center" style="color: #5c5c5c;">Debajo encontrarás los modelos emblemáticos de nuestras colecciones. Te invitamos a nuestra joyería a ver la colección completa.</h5>
+			</div>
+            <div class="orbit" role="region" aria-label="coleccion luminox" data-orbit>
+                <ul class="orbit-container">
+                    <li class="is-active orbit-slide">
+                        <img src="img/coleccion_air.png" alt="" class="float-center">
+                    </li>
+                    <li class="orbit-slide">
+                        <img src="img/coleccion_land.png" alt="" class="float-center">
+                    </li>
+                    <li class="orbit-slide">
+                        <img src="img/coleccion_sea.png" alt="" class="float-center">
+                    </li>
+                    <li class="orbit-slide">
+                        <img src="img/coleccion_space.png" alt="" class="float-center">
+                    </li>
+                </ul>
+                <nav class="orbit-bullets">
+                    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+                    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                    <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+                </nav>
+            </div>
+        </div>
 		<!-- REGALOS -->
 		<div class="expanded row regalos" id="regalos">
 			<div class="row">
@@ -172,7 +224,7 @@
 				<div class="small-12 large-6 columns">
 					<h4 class="text-center">¡Dejá tus datos para activar la promo!</h4>
 					<form action="php/participar_promo.php" method="POST">
-							<input type="text" name="nombre" placeholder="Nombre:">
+							<input type="text" name="nombre" placeholder="Nombre Completo:">
 							<input type="email" name="mail" placeholder="Mail:">
 							<input type="text" name="telefono" placeholder="Teléfono:">
 							<input type="submit" class="button primary expanded btn_enviar" value="PARTICIPAR">
@@ -203,9 +255,12 @@
             <p>9. Publicidad: La participación en esta promoción implica el conocimiento y la aceptación absoluta e inapelable de todas las condiciones contenidas en estas bases que podrán ser consultadas en la página web www.promoluminox.com.ar, así como por anuncios publicitarios realizados por parte del Organizador en Google y Facebook.</p>
             <p>10. Exención de Responsabilidad: Se deja constancia que Facebook o Google, no patrocinan, avalan, ni administran de modo alguno esta Promoción, ni están asociados a ella.</p>
             <p>11. Jurisdicción Competente: Por cualquier cuestión judicial que pudiera derivarse de la realización de la Promoción, se fija la jurisdicción de los Tribunales Ordinarios en lo Comercial de la Ciudad Autónoma de Buenos Aires, con renuncia a cualquier otro fuero o jurisdicción que pudiere corresponder.</p>
-            <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <button class="button primary" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">CERRAR</span>
+        </button>
     </div>		
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
