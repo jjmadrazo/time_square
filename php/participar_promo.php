@@ -26,10 +26,10 @@ $header .= "Content-Type:text/plain;charset=utf-8";
 $success = mail($para, $subject, $emailbody, $header);
 // Redireccionamiento despues de enviar el mensaje
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=http://luminox.madrastudio.com/gracias.html\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=http://timesquare.promoluminox.com.ar/gracias.html\">";
 }
 else{
   echo "<script language='javascript'>alert('Error, no se pudo enviar el mensaje');</script>";
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=http://luminox.madrastudio.com\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=http://timesquare.promoluminox.com.ar\">";
 }
 ?>
